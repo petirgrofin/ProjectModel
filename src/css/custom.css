@@ -4,6 +4,7 @@
  * work well for content-centric websites.
  */
 
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;
@@ -27,4 +28,122 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.question-container{
+  background-color: #F8F8F8;
+  border-radius: 20px 20px 0px 0px;
+  padding: 20px;
+  width: 500px;
+}
+
+.explanation-container{
+  background-color: #F2F2F2;
+  border-radius: 0px 0px 20px 20px;
+  width: 500px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.15s ease-out;
+}
+
+.explanation-text{
+  padding: 20px;
+}
+
+.slide-down{
+  max-height: 500px;
+  transition: max-height 0.25s ease-in;
+}
+
+.option-container{
+  border: solid 2px #E5E5E5;
+  border-radius: 20px;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.hovered{
+  background-color: #F6F8FF;
+  border-color: #b3c1f3;
+  cursor: pointer;
+}
+
+.selected{
+  background-color: #F6F8FF;
+  color: #294BC6;
+  border-color: #375CE3;
+  cursor: pointer;
+}
+
+.disabled{
+  color: #808080;
+  cursor: not-allowed;
+}
+
+.correct{
+  background-color: #F4FCF7;
+  color: #009B2B;
+  border-color: #15B441;
+}
+
+.incorrect{
+  background-color: #ebbfb2;
+  color: #b9230f;
+  border-color: #bd2c19;
+}
+
+.buttons-container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.check-button{
+  color: white;
+  background-color: black;
+  margin-top: 20px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  width: 100px;
+}
+
+.check-button:hover{
+  background-color: rgba(0, 0, 0, 0.90);
+  cursor: pointer;
+}
+
+.why-button{
+  color: black;
+  background-color: #EBEBEB;
+  border-radius: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  width: 100px;
+  font-weight: bold;
+}
+
+.why-button:hover{
+  background-color: #d1d1d1;
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
 }

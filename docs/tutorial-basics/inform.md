@@ -1,3 +1,5 @@
+import MultipleAnswer from '@site/src/components/MultipleAnswer'
+
 # Informar
 
 Antes de empezar cualquier proyecto, independientemente de su naturaleza, primero debemos **informarnos**. 
@@ -13,6 +15,8 @@ Muchas personas saltan a elaborar un proyecto sin antes informarse correctamente
 
 :::
 
+## Informarse acerca de la compra de un carro
+
 Imaginemos que queremos comprar un carro. Dado que un carro suele ser una compra bastante importante (¡y cara!), lo 
 más natural que podemos hacer es recopilar información acerca del carro. No sería prudente simplemente ir a un concesionario cualquiera y elegir el primer carro que encontremos, sin importarnos sus características, ya que
 es una compra que idealmente debería durarnos varios años.
@@ -27,17 +31,19 @@ Y un carro así:
 
 Antes de comprar un carro, debemos tomar en cuenta muchos factores:
 
-- **Tipos de autos**: Esto incluye investigar acerca de *marcas y modelos*. Por ejemplo, si tenemos que transportar a muchas personas puede que nos interese un carro familiar, pero dependiendo de nuestras necesidades podría servirnos un carro eléctrico, deportivo, híbrido o de bajo consumo. Asimismo, dependiendo de nuestro presupuesto, podríamos comprar algo barato, como un Subaru, o algo muy caro, como un BMW.
+- **Tipos de autos**: Esto incluye investigar acerca de *marcas y modelos*. <!---Por ejemplo, si tenemos que transportar a muchas personas puede que nos interese un carro familiar, pero dependiendo de nuestras necesidades podría servirnos un carro eléctrico, deportivo, híbrido o de bajo consumo. Asimismo, dependiendo de nuestro presupuesto, podríamos comprar algo barato, como un Subaru, o algo muy caro, como un BMW.-->
 
 - **Presupuesto y costos adicionales**: Además del precio del carro, necesitamos tomar en cuenta costos de mantenimiento, impuestos y el seguro del auto. Incluso puede ser necesario tomar en cuenta si es necesario un crédito o préstamo.
 
 - **Características**: Se debe tomar en cuenta el rendimiento y la eficiencia del combustible, seguridad, tecnología, confort, garantía, etc. Incluso se pueden considerar aspectos ambientales.
 
-<img src='/img/car-brands-chart.webp' />
+<img src='/img/car brands.jpg' />
 
-¿Cómo obtenemos esta información? En el caso de los carros, existen varias maneras. Podemos investigar en internet, revisando los sitios promocionales de los modelos que nos interesan, o incluso ver videos y reseñas de otras personas. También podemos consultar con personas confiables que tengan más experiencia con los carros.
+<!---## ¿Cómo obtenemos esta información?
 
-Una vez hemos investigado acerca de los tipos de carros, sus características y considerado nuestro presupuesto, lo siguiente sería preguntarnos acerca del proceso de comprar el carro. Probablemente nos daremos cuenta que no es tan simple como llegar a la tienda y hacer esto:
+¿Cómo obtenemos esta información? En el caso de los carros, existen varias maneras. Podemos investigar en internet, revisando los sitios promocionales de los modelos que nos interesan, o incluso ver videos y reseñas de otras personas. También podemos consultar con personas confiables que tengan más experiencia con los carros.-->
+
+<!---Una vez hemos investigado acerca de los tipos de carros, sus características y considerado nuestro presupuesto, lo siguiente sería preguntarnos acerca del proceso de comprar el carro. Probablemente nos daremos cuenta que no es tan simple como llegar a la tienda y hacer esto:
 
 <img src='/img/buy-car.jpg' />
 
@@ -47,7 +53,11 @@ Luego de hacer un pago inicial, debamos registrar el carro a nuestro nombre en e
 
 Si hubieramos llegado al concesionario sin habernos informado, habríamos ralentizado el proyecto significativamente (por ejemplo, devolviéndonos a la casa con la cara llena de vergüenza después de que nos preguntaran acerca de los "caballos de fuerza" sin saber que significa).
 
-<img src='/img/horsepower.webp' width='640' height='500'/>
+<img src='/img/horsepower.webp' width='640' height='500'/>-->
+
+## Probando nuestro conocimiento
+
+<MultipleAnswer info="Suponga que queremos planear una fiesta de cumpleaños. ¿Cuál podría ser nuestro primer paso?" options={['Ir a la tienda a comprar decoraciones', 'Comprar el queque', 'Preguntarle al cumpleañero acerca de sus preferencias']} correctAnswerIndex={2} explanation="Las primeras dos opciones no se relacionan con informarse, sino con actuar, mientras que la última es la única que recopila información"></MultipleAnswer>
 
 ## ¿Ahora qué?
 

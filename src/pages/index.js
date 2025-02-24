@@ -19,7 +19,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/ModelDiagram">
-            Docusaurus Tutorial - 5min ⏱️
+            Revisa el modelo de proyectos
           </Link>
         </div>
       </div>
