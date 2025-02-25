@@ -48,7 +48,7 @@ const nodes = [
 ];
 
 const routes = {
-  1: '/docs/tutorial-basics/inform'
+  1: '/ProjectModel/docs/tutorial-basics/inform'
 }
 
 const DiagramComponent = () => {

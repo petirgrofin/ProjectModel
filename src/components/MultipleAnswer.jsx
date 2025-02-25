@@ -4,13 +4,13 @@ import { useState } from 'react'
 const MultipleAnswerOption = ({id, option, setSelectedId, isSelected, isCorrect, isIncorrect, isDisabled}) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div onMouseEnter={() => {setIsHovered(!isDisabled)}} onMouseLeave={() => {setIsHovered(false)}} onClick={() => {if (!isDisabled){setSelectedId(id)}}}
+    <button onMouseEnter={() => {setIsHovered(!isDisabled)}} onMouseLeave={() => {setIsHovered(false)}} onClick={() => {if (!isDisabled){setSelectedId(id)}}}
     className={`option-container 
     ${isSelected ? 'selected' : ''} 
     ${isCorrect ? 'correct' : ''}
     ${isIncorrect ? 'incorrect' : ''}
     ${isDisabled ? 'disabled' : ''}
-    ${isHovered && !isSelected ? 'hovered' : ''}`}>{option}</div>
+    ${isHovered && !isSelected ? 'hovered' : ''}`}>{option}</button>
   )
 }
 
@@ -21,14 +21,14 @@ const MultipleAnswer = ({info, options, correctAnswerIndex, explanation}) => {
   const [answerIsCorrect, setAnswerIsCorrect] = useState(false);
   const [wasWhyClicked, setWasWhyClicked] = useState(false);
   return (
-    <div className='multiple-answer-container'>
+    <div className='multiple-answer'>
       <div className='question-container'>
         <p>{info}</p>
         {options.map((option, i) => (
           <MultipleAnswerOption 
           id={i} 
           isSelected={selectedId == i} 
-          isCorrect={selectedId == i && wasAnswered && answerIsCorrect} 
+          isCorrect={wasAnswered && i == correctAnswerIndex} 
           isIncorrect={selectedId == i && wasAnswered && !answerIsCorrect} 
           isDisabled={selectedId != i && wasAnswered}
           setSelectedId={setSelectedId} 

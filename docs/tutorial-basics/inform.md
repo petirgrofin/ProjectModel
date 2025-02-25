@@ -1,4 +1,5 @@
 import MultipleAnswer from '@site/src/components/MultipleAnswer'
+import MultipleAnswerContainer from '@site/src/components/MultipleAnswerContainer'
 
 # Informar
 
@@ -14,30 +15,6 @@ proceso investigativo que hace uso de diversas fuentes de información, como lib
 Muchas personas saltan a elaborar un proyecto sin antes informarse correctamente acerca de lo que conlleva. Informarse sienta las **bases** necesarias para desarrollar un proyecto con la menor cantidad de contratiempos posible.
 
 :::
-
-## Informarse acerca de la compra de un carro
-
-Imaginemos que queremos comprar un carro. Dado que un carro suele ser una compra bastante importante (¡y cara!), lo 
-más natural que podemos hacer es recopilar información acerca del carro. No sería prudente simplemente ir a un concesionario cualquiera y elegir el primer carro que encontremos, sin importarnos sus características, ya que
-es una compra que idealmente debería durarnos varios años.
-
-Informarnos puede ser la diferencia entre terminar con alguno de estos carros:
-
-![](/img/futuristic-cars.avif)
-
-Y un carro así:
-
-<img src='/img/mcqueen.jpg' width='640' height='500'  />
-
-Antes de comprar un carro, debemos tomar en cuenta muchos factores:
-
-- **Tipos de autos**: Esto incluye investigar acerca de *marcas y modelos*. <!---Por ejemplo, si tenemos que transportar a muchas personas puede que nos interese un carro familiar, pero dependiendo de nuestras necesidades podría servirnos un carro eléctrico, deportivo, híbrido o de bajo consumo. Asimismo, dependiendo de nuestro presupuesto, podríamos comprar algo barato, como un Subaru, o algo muy caro, como un BMW.-->
-
-- **Presupuesto y costos adicionales**: Además del precio del carro, necesitamos tomar en cuenta costos de mantenimiento, impuestos y el seguro del auto. Incluso puede ser necesario tomar en cuenta si es necesario un crédito o préstamo.
-
-- **Características**: Se debe tomar en cuenta el rendimiento y la eficiencia del combustible, seguridad, tecnología, confort, garantía, etc. Incluso se pueden considerar aspectos ambientales.
-
-<img src='/img/car brands.jpg' />
 
 <!---## ¿Cómo obtenemos esta información?
 
@@ -55,10 +32,12 @@ Si hubieramos llegado al concesionario sin habernos informado, habríamos ralent
 
 <img src='/img/horsepower.webp' width='640' height='500'/>-->
 
-## Probando nuestro conocimiento
+## Ejemplos
 
-<MultipleAnswer info="Suponga que queremos planear una fiesta de cumpleaños. ¿Cuál podría ser nuestro primer paso?" options={['Ir a la tienda a comprar decoraciones', 'Comprar el queque', 'Preguntarle al cumpleañero acerca de sus preferencias']} correctAnswerIndex={2} explanation="Las primeras dos opciones no se relacionan con informarse, sino con actuar, mientras que la última es la única que recopila información"></MultipleAnswer>
+<MultipleAnswerContainer>
 
-## ¿Ahora qué?
+<MultipleAnswer info="Suponga que queremos planear una fiesta de cumpleaños. ¿Cuál podría ser nuestro primer paso?" options={['Ir a la tienda a comprar decoraciones', 'Comprar el queque', 'Preguntarle al cumpleañero acerca de sus preferencias']} correctAnswerIndex={2} explanation="Las primeras dos opciones no se relacionan con informarse, sino con actuar, mientras que la última es la única que recopila información."></MultipleAnswer>
 
-Si ya nos hemos informado al máximo respecto a nuestra compra (lo cual puede conllevar bastante tiempo), el siguiente paso es **planificar**.
+<MultipleAnswer info="Suponga que queremos estudiar en una universidad pública. ¿Cuál podría ser nuestro primer paso?" options={['Leer el plan de estudios de las carreras', 'Hacer el examen de admisión', 'Pagar la matrícula']} correctAnswerIndex={0} explanation="Hacer el examen de admisión y pagar la matrícula se refieren a acciones de ejecución, mientras que leer implica recopilar información."></MultipleAnswer>
+
+</MultipleAnswerContainer>
