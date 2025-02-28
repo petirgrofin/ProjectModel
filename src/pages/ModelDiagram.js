@@ -5,50 +5,78 @@ import { useHistory } from '@docusaurus/router';
 import { ReactFlow } from '@xyflow/react';
 import '@xyflow/react/dist/style.css'; 
 
+function generatePointsAroundCircle(h, k, r, n){
+  let circumferenceLength = 2 * Math.PI * r
+  let points = [{x: h, y: k + r}] // starts at the point directly above the center
+  for (let i = 1; i < 6; i++){
+    let arcLength = i * circumferenceLength/n // distance between each point along the circumference
+    let theta = arcLength/r
+    let complementaryTheta = Math.PI/2 - theta
+    points.push({x: r * Math.cos(complementaryTheta) + h, y: r * Math.sin(complementaryTheta) + k})
+  }
+  return points
+}
+
+let points = generatePointsAroundCircle(100, 100, 200, 6)
+
+console.log(points);
+
 const edges = [
-  { id: '1-2', source: '1', target: '2'},
-  { id: '2-3', source: '2', target: '3'},
-  { id: '3-4', source: '3', target: '4'},
-  { id: '4-5', source: '4', target: '5'},
-  { id: '5-6', source: '5', target: '6'},
+  { id: '1-2', source: '1', target: '2', label: 'con la información obtenida'},
+  { id: '2-3', source: '2', target: '3', label: 'para consolidar el plan'},
+  { id: '3-4', source: '3', target: '4', label: 'para realizar el plan'},
+  { id: '4-5', source: '4', target: '5', label: 'para comprobar el proceso'},
+  { id: '5-6', source: '5', target: '6', label: 'para reflexionar'},
+  { id: '6-1', source: '6', target: '1', label: 'y empezar nuevamente con'}
 ];
  
 const nodes = [
   {
     id: '1',
     data: { label: 'Informar' },
-    position: { x: 0, y: 0 },
-    type: 'input',
+    position: points[3], // 0, 0
+    targetPosition: 'bottom',
+    sourcePosition: 'bottom'
   },
   {
     id: '2',
     data: { label: 'Planificar' },
-    position: { x: 100, y: 100 },
+    position: points[2],
   },
   {
     id: '3',
     data: { label: 'Decidir' },
-    position: { x: 50, y: 200 },
+    position: points[1],
   },
   {
     id: '4',
     data: { label: 'Ejecutar' },
-    position: { x: 0, y: 300 },
+    position: points[0],
+    sourcePosition: 'top'
   },
   {
     id: '5',
     data: { label: 'Controlar' },
-    position: { x: 50, y: 400 },
+    position: points[5],
+    targetPosition: 'bottom',
+    sourcePosition: 'top',
   },
   {
     id: '6',
     data: { label: 'Valorar' },
-    position: { x: 100, y: 500 },
+    position: points[4],
+    sourcePosition: 'top',
+    targetPosition: 'bottom'
+  },
+  {
+    id: '7',
+    data: {label: 'Los saberes'},
+    position: {x: 100, y: 100},
   }
 ];
 
 const routes = {
-  1: '/ProjectModel/docs/tutorial-basics/inform'
+  1: '/ProjectModel/docs/steps/inform'
 }
 
 const DiagramComponent = () => {
@@ -61,7 +89,7 @@ const DiagramComponent = () => {
   };
 
   return (
-  <div style={{ height: '100vh' }}>
+  <div style={{ height: '94vh' }}>
     <ReactFlow onNodeClick={onNodeClick} colorMode={colorMode} fitView nodes={nodes} edges={edges} />
   </div>
   );
