@@ -4,7 +4,7 @@ Una vez el proyecto se ha completado, se **valora** el proceso; es decir, se hac
 
 ## Ejemplos
 
-- Una vez se termina de desarrollar una página web, se puede identificar áreas a mejorar (convivencia en grupo, herramientas utilizadas, problemática afrontada), para poder elaborar otras páginas de mejor manera.
+- Una vez se termina de desarrollar una página web, se pueden identificar áreas a mejorar (convivencia en grupo, herramientas utilizadas, problemática afrontada), para poder elaborar otras páginas de mejor manera.
 
 - Una vez se termina de pintar una pared, se puede valorar si el pintado se pudo haber hecho de otra manera o con herramientas distintas.
 

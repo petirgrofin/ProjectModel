@@ -1,3 +1,7 @@
+---
+id: general-example
+---
+
 # La compra de un carro
 
 ## Informarse acerca de la compra de un carro

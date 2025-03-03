@@ -1,7 +1,16 @@
+---
+id: decide
+title: Decidir
+sidebar_position: 3
+---
+
+
 import MultipleAnswer from '@site/src/components/MultipleAnswer'
 import MultipleAnswerContainer from '@site/src/components/MultipleAnswerContainer'
 
 # Decidir
+
+Una vez hemos redactado una propuesta de plan, el siguiente paso es decidir.
 
 ## ¿Qué es decidir?
 

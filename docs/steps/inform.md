@@ -1,3 +1,9 @@
+---
+id: inform
+title: Informar
+sidebar_position: 1
+---
+
 import MultipleAnswer from '@site/src/components/MultipleAnswer'
 import MultipleAnswerContainer from '@site/src/components/MultipleAnswerContainer'
 

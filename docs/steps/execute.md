@@ -1,3 +1,9 @@
+---
+id: execute
+title: Ejecutar
+sidebar_position: 4
+---
+
 # Ejecutar
 
 Una vez tenemos un plan detallado y sólido, podemos empezar la ejecución del proyecto. Ejecutar se refiere a **realizar nuestro proyecto** siguiendo nuestra propuesta metodológica. 

@@ -1,3 +1,9 @@
+---
+id: control
+title: Controlar
+sidebar_position: 5
+---
+
 # Controlar
 
 Controlar se refiere al proceso de **comprobar** la calidad del proyecto mientras se elabora. Es decir, asegurarse de que el proyecto se está realizando de manera correcta. Una vez se termina una tarea del plan, se revisa la calidad del trabajo para corregir fallos detectados.

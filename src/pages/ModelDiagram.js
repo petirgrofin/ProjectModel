@@ -34,7 +34,7 @@ const nodes = [
   {
     id: '1',
     data: { label: 'Informar' },
-    position: points[3], // 0, 0
+    position: points[3], 
     targetPosition: 'bottom',
     sourcePosition: 'bottom'
   },
@@ -72,11 +72,18 @@ const nodes = [
     id: '7',
     data: {label: 'Los saberes'},
     position: {x: 100, y: 100},
-  }
+  },
+
 ];
 
 const routes = {
-  1: '/ProjectModel/docs/steps/inform'
+  1: '/ProjectModel/docs/steps/inform',
+  2: '/ProjectModel/docs/steps/plan',
+  3: '/ProjectModel/docs/steps/decide',
+  4: '/ProjectModel/docs/steps/execute',
+  5: '/ProjectModel/docs/steps/control',
+  6: '/ProjectModel/docs/steps/assess',
+  7: '/ProjectModel/docs/category/los-saberes'
 }
 
 const DiagramComponent = () => {
@@ -90,6 +97,7 @@ const DiagramComponent = () => {
 
   return (
   <div style={{ height: '94vh' }}>
+    <p style={{position: 'absolute', left: 50, top: 100}}>Haz click en los nodos para navegar</p>
     <ReactFlow onNodeClick={onNodeClick} colorMode={colorMode} fitView nodes={nodes} edges={edges} />
   </div>
   );

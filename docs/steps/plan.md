@@ -1,3 +1,9 @@
+---
+id: plan
+title: Planificar
+sidebar_position: 2
+---
+
 import MultipleAnswer from '@site/src/components/MultipleAnswer'
 import MultipleAnswerContainer from '@site/src/components/MultipleAnswerContainer'
 

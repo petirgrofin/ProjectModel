@@ -73,8 +73,13 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Pasos',
+            label: 'Aprender',
           },
+          {
+            to: '/evaluation',
+            label: 'Evaluación'
+            
+          }
         ],
       },
       footer: {
