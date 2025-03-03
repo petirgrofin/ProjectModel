@@ -36,23 +36,27 @@ const nodes = [
     data: { label: 'Informar' },
     position: points[3], 
     targetPosition: 'bottom',
-    sourcePosition: 'bottom'
+    sourcePosition: 'bottom',
+    style: { backgroundColor: "#55BD51"}
   },
   {
     id: '2',
     data: { label: 'Planificar' },
     position: points[2],
+    style: { backgroundColor: "#AFEBA2"}
   },
   {
     id: '3',
     data: { label: 'Decidir' },
     position: points[1],
+    style: { backgroundColor: "#CBEBBC"}
   },
   {
     id: '4',
     data: { label: 'Ejecutar' },
     position: points[0],
-    sourcePosition: 'top'
+    sourcePosition: 'top',
+    style: { backgroundColor: "#DBE6DA"}
   },
   {
     id: '5',
@@ -60,18 +64,21 @@ const nodes = [
     position: points[5],
     targetPosition: 'bottom',
     sourcePosition: 'top',
+    style: { backgroundColor: "#CBEBBC"}
   },
   {
     id: '6',
     data: { label: 'Valorar' },
     position: points[4],
     sourcePosition: 'top',
-    targetPosition: 'bottom'
+    targetPosition: 'bottom',
+    style: { backgroundColor: "#AFEBA2"}
   },
   {
     id: '7',
     data: {label: 'Los saberes'},
     position: {x: 100, y: 100},
+    style: { backgroundColor: "#060F04", color: 'white'}
   },
 
 ];
