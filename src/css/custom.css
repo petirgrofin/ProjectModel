@@ -53,6 +53,10 @@ button, input[type="submit"], input[type="reset"] {
   width: 100%;
 }
 
+.multiple-answer{
+  width: 100%;
+}
+
 .explanation-container{
   background-color: #F2F2F2;
   border-radius: 0px 0px 20px 20px;

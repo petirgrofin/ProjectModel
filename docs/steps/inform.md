@@ -46,4 +46,8 @@ Si hubieramos llegado al concesionario sin habernos informado, habríamos ralent
 
 <MultipleAnswer info="Suponga que queremos estudiar en una universidad pública. ¿Cuál podría ser nuestro primer paso?" options={['Leer el plan de estudios de las carreras', 'Hacer el examen de admisión', 'Pagar la matrícula']} correctAnswerIndex={0} explanation="Hacer el examen de admisión y pagar la matrícula se refieren a acciones de ejecución, mientras que leer implica recopilar información."></MultipleAnswer>
 
+<MultipleAnswer info="Queremos iniciar un negocio en línea. ¿Qué deberíamos hacer primero?" options={['Investigar el mercado', 'Crear un sitio web', 'Contratar empleados']} correctAnswerIndex={0} explanation="Investigar el mercado es un paso inicial de recopilación de información antes de ejecutar cualquier acción relacionada con iniciar el negocio." />
+
+<MultipleAnswer info="Deseamos aprender un nuevo idioma. ¿Cuál sería un primer paso recomendable?" options={['Conocer qué idiomas son más útiles', 'Inscribirse en un curso', 'Comprar libros de gramática']} correctAnswerIndex={0} explanation="Antes de tomar decisiones o gastar dinero, es recomendable investigar cuál idioma se adapta mejor a nuestras necesidades." />
+
 </MultipleAnswerContainer>

@@ -27,4 +27,8 @@ El hecho de que tengamos un plan no significa que lo realizaremos. Por ahora, se
 
 <MultipleAnswer info="Suponga que queremos desarrollar una página web para un negocio y que ya nos informamos acerca de las necesidades del cliente. ¿Cuál sería una buena siguiente acción?" options={['Descargar React en la computadora', 'Escribir un plan detallado que describa paso por paso el proyecto', 'Crear un index.html' ]} correctAnswerIndex={1} explanation="Describir nuestro procedimiento debería realizarse antes de descargar alguna herramienta o empezar a programar la página, para llevar el proceso de manera ordenada"></MultipleAnswer>
 
+<MultipleAnswer info="Queremos mejorar nuestra condición física. ¿Qué acción corresponde a la fase de planificación?" options={['Describir un plan de entrenamiento', 'Inscribirse en un gimnasio', 'Comprar ropa deportiva']} correctAnswerIndex={0} explanation="Describir un plan de entrenamiento nos permite establecer objetivos antes de tomar decisiones de ejecución." />
+
+<MultipleAnswer info="Queremos abrir una cafetería. ¿Qué acción pertenece a la fase de planificación?" options={['Elaborar un plan de negocio', 'Comprar el mobiliario', 'Contratar empleados']} correctAnswerIndex={0} explanation="Elaborar un plan de negocio es fundamental para definir estrategias antes de ejecutar acciones como compras o contrataciones." />
+
 </MultipleAnswerContainer>

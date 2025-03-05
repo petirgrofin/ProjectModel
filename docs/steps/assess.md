@@ -1,5 +1,8 @@
 # Valorar
 
+import MultipleAnswer from '@site/src/components/MultipleAnswer'
+import MultipleAnswerContainer from '@site/src/components/MultipleAnswerContainer'
+
 Una vez el proyecto se ha completado, se **valora** el proceso; es decir, se hace un proceso de **retroalimentación** que sirve para identificar errores y éxitos logrados, así como también reflexionar sobre la dinámica de grupo y posibles propuestas de mejora para la realización de proyectos futuros.
 
 ## Ejemplos
@@ -13,3 +16,5 @@ Una vez el proyecto se ha completado, se **valora** el proceso; es decir, se hac
 - Cuando se termina un ejercicio de matemáticas, se puede valorar si había una solución más simple.
 
 Por lo tanto, valorar nuestro desempeño en el desarrollo de un proyecto nos ayuda a realizar otros proyectos de mejor manera.
+
+<MultipleAnswer info="Finalizamos un curso de capacitación en liderazgo. ¿Qué acción pertenece a la fase de valoración?" options={['Analizar qué habilidades hemos desarrollado', 'Inscribirse en otro curso', 'Asistir a la ceremonia de graduación']} correctAnswerIndex={0} explanation="Analizar qué habilidades se desarrollaron permite valorar el impacto del curso antes de decidir nuevos pasos." />
