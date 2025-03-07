@@ -21,6 +21,8 @@ El hecho de que tengamos un plan no significa que lo realizaremos. Por ahora, se
 
 :::
 
+<img src={require('/static/img/plan.webp').default} />
+
 ## Ejemplos
 
 <MultipleAnswerContainer>

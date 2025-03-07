@@ -11,6 +11,8 @@ import MultipleAnswerContainer from '@site/src/components/MultipleAnswerContaine
 
 Controlar se refiere al proceso de **comprobar** la calidad del proyecto mientras se elabora. Es decir, asegurarse de que el proyecto se está realizando de manera correcta. Una vez se termina una tarea del plan, se revisa la calidad del trabajo para corregir fallos detectados.
 
+<img src={require('/static/img/control.jpg').default} />
+
 ## Ejemplos
 
 - Mientras se desarrolla una página web, se pueden escribir pruebas que sirvan para comprobar que los cambios que se van realizando funcionan y no afectan el resto del proyecto. 

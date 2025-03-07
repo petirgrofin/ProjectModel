@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Layout from '@theme/Layout';
 import {ReactFlow, addEdge } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
+import {useColorMode} from '@docusaurus/theme-common';
 
 function shuffle(array) {
   let currentIndex = array.length;
@@ -61,82 +62,80 @@ function checkAnswer(edges) {
   });
 }
 
-export default function Evaluation() {
-  const [nodes, setNodes] = useState(initialNodes);
-  const [edges, setEdges] = useState(initialEdges);
+const EvaluationMatch = () => {
+
+  const [nodes] = useState(initialNodes);
+  const [edges, setEdges] = useState([]);
   const [validatedEdges, setValidatedEdges] = useState([]);
   const [showCorrect, setShowCorrect] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
 
-  const onConnect = (params) => {
-    if ((params.source.includes('left') && params.target.includes('left')) || 
-        params.source.includes('right') && params.target.includes('right')){
-          return;
-        }
-    // Filter out any existing edges that involve the source or target node
-    let newEdges = edges.filter(
-      (edge) => edge.source !== params.source && edge.target !== params.target && edge.source !== params.target && edge.target !== params.source
-    );
+  const {colorMode} = useColorMode();
   
-    // Add the new edge (after removing any conflicting edges)
+  const allMatched = edges.length === answers.length;
+  const hasIncorrect = validatedEdges.some(edge => edge.style.stroke === "red");
+
+  const onConnect = (params) => {
+    if ((params.source.includes("left") && params.target.includes("left")) ||
+        (params.source.includes("right") && params.target.includes("right"))) {
+      return;
+    }
+    let newEdges = edges.filter(
+      (edge) => edge.source !== params.source && edge.target !== params.target
+    );
     setEdges((eds) => addEdge(params, newEdges));
   };
 
-  console.log(edges);
-  
   const handleCheck = () => {
-    if (edges.length < 6){
-      return
-    }
     setValidatedEdges(checkAnswer(edges));
   };
 
   const handleCorrectAnswer = () => {
     setShowCorrect(true);
-    setValidatedEdges(answers.map(pair => ({
-      id: `${pair[0]}-${pair[1]}`,
-      source: `left-${pair[0]}`,
-      target: `right-${pair[1]}`,
-      style: { stroke: "green", strokeWidth: 2 }
-    })));
+    setValidatedEdges(
+      answers.map((pair) => ({
+        id: `${pair[0]}-${pair[1]}`,
+        source: `left-${pair[0]}`,
+        target: `right-${pair[1]}`,
+        style: { stroke: "green", strokeWidth: 2 },
+      }))
+    );
   };
 
   return (
-    <Layout>
-      <div style={{height: "94vh" }}>
-        <ReactFlow
-          nodes={nodes}
-          edges={validatedEdges.length > 0 ? validatedEdges : edges}
-          onConnect={onConnect}
-          fitView fitViewOptions={{padding: 0.2}}>
-        </ReactFlow>
-        
-        <button onClick={handleCheck} style={{ position: "absolute", bottom: 20, left: 20, padding: "10px 20px" }}>
-          Revisar
-        </button>
+    <div style={{ height: "94vh", position: "relative", padding: "10px" }}>
+    <p style={{ position: "absolute", top: 30, left: 40, fontSize: 18}}>Asocie cada fase con una acción correcta</p>
+    <ReactFlow colorMode={colorMode} nodes={nodes} edges={validatedEdges.length > 0 ? validatedEdges : edges} onConnect={onConnect} fitView />
+    
+    {allMatched && (
+      <>
+        <button onClick={handleCheck} style={{fontSize: 18, position: "absolute", bottom: 20, left: 20, padding: "10px 20px" }}>Revisar</button>
+        <button onClick={() => setShowInfo(true)} style={{ fontSize: 18, position: "absolute", bottom: 20, left: 100, padding: "10px 20px" }}>Info</button>
+      </>
+    )}
 
-        <button onClick={handleCorrectAnswer} style={{ position: "absolute", bottom: 20, left: 100, padding: "10px 20px" }}>
-          Respuesta correcta
-        </button>
+    {hasIncorrect && (
+      <button onClick={handleCorrectAnswer} style={{ fontSize: 18, position: "absolute", bottom: 20, left: 150, padding: "10px 20px" }}>Respuesta correcta</button>
+    )}
 
-        <button onClick={() => setShowInfo(true)} style={{ position: "absolute", bottom: 20, left: 250, padding: "10px 20px" }}>
-          Info
-        </button>
-
-        {showInfo && (
-          <div style={{
-            position: "fixed", top: 0, left: 0, width: "100vw", height: "100vh",
-            backgroundColor: "rgba(0, 0, 0, 0.5)", display: "flex", alignItems: "center", justifyContent: "center"
-          }}>
-            <div style={{ backgroundColor: "white", padding: "20px", borderRadius: "10px", width: "50%", textAlign: "center" }}>
-              <h2>¿Por qué estas son las respuestas correctas?</h2>
-              <p>Cada par representa una conexión lógica entre la etapa del modelo de proyectos y una acción.</p>
-              <button onClick={() => setShowInfo(false)} style={{ marginTop: "10px", padding: "10px 20px" }}>Close</button>
-            </div>
-          </div>
-        )}
-
+    {showInfo && (
+      <div style={{ position: "fixed", top: 0, left: 0, width: "100vw", height: "100vh", backgroundColor: "rgba(0, 0, 0, 0.5)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ backgroundColor: "white", padding: "20px", borderRadius: "10px", width: "50%", textAlign: "center" }}>
+          <h2>¿Por qué estas son las respuestas correctas?</h2>
+          <p>Cada par representa una conexión lógica entre la etapa del modelo de proyectos y una acción.</p>
+          <button onClick={() => setShowInfo(false)} style={{ fontSize: 18, marginTop: "10px", padding: "10px 20px" }}>Cerrar</button>
+        </div>
       </div>
+    )}
+  </div>
+  )
+}
+
+export default function Evaluation() {
+
+  return (
+    <Layout>
+      <EvaluationMatch/>
     </Layout>
   );
 }

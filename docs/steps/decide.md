@@ -24,6 +24,8 @@ Una decisión puede conllevar una reestructuración del plan de trabajo, lo cual
 
 :::
 
+<img src={require('/static/img/decide.png').default} />
+
 ## Ejemplos
 
 <MultipleAnswerContainer>

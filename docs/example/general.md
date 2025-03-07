@@ -42,20 +42,37 @@ Supongamos que duramos unos cuantos días investigando acerca de diversos carros
 8. **Recepción del vehículo y revisión final** <!---Por último, recibimos el vehículo y probamos que todo esté en orden.-->
 9. **Disfrutar** 😎
 
+<img src={require('/static/img/buy-car.jpg').default} />
+
 Claramente, realizar un plan no es posible sin antes informarse. El plan nos dice una propuesta más concreta de cómo debemos actuar, manteniendo a su vez un cierto margen de variabilidad en caso de algún cambio a futuro.
 
 ## Decidir acerca de la compra de un carro
 
-En nuestro plan, no mencionamos un detalle muy importante: ¿cuál modelo de carro vamos a comprar? Para ello, podemos realizar la **decisión** de comprar, por ejemplo, un BMW ix M60. Asimismo, podemos consolidar otros detalles del plan para tener una estrategia más clara. 
+En nuestro plan, no mencionamos un detalle muy importante: ¿cuál modelo de carro vamos a comprar? Para ello, podemos realizar la **decisión** de comprar, por ejemplo, un BMW ix M60. Asimismo, podemos consolidar otros detalles del plan para tener una estrategia más clara.
+
+A medida que estamos robusteciendo el plan, puede que sea necesario modificar las estrategias establecidas. Por ejemplo, si elegimos un carro muy caro, tendríamos que modificar nuestro presupuesto y nuestro rango de búsqueda geográfica del concesionario, o buscar otro carro que sea más accesible.
+
+<img src={require('/static/img/BMW.jpg').default} />
 
 ## Ejecutar la compra de un carro
 
-Ahora podemos seguir el plan establecido previamente. Como ya tenemos una serie de pasos claros a seguir y nos informamos ampliamente respecto al tema, no deberíamos encontrar muchos obstáculos en el proceso. Sin embargo, es importante tomar en cuenta cualquier eventualidad que surja (por ejemplo, que nos pregunten acerca de algún término técnico que desconozcamos, como los "caballos de fuerza")
+Ahora podemos seguir el plan establecido previamente. Como ya tenemos una serie de pasos claros a seguir y nos informamos ampliamente respecto al tema, no deberíamos encontrar muchos obstáculos en el proceso. Por ejemplo, puede que nos pregunten acerca de términos técnicos que desconozcamos, como "caballos de fuerza", eficiencia energética, torque, entre otros. 
+
+Es importante apuntar cualquier eventualidad que surja en caso de que tengamos que devolvernos a alguna etapa anterior, para que sepamos en qué tenemos que enfocarnos para progresar (ya sea informarse más o establecer un plan más cercano a la realidad).
+
+<img src={require('/static/img/give-keys.avif').default} />
 
 ## Controlar la compra de un carro
 
 Mientras estamos en el proceso de efectuar nuestro plan, debemos comprobar que cada paso se está realizando de manera correcta. Por ejemplo, si el concesionario al que vamos no tiene el carro que queremos, debemos reestructurar nuestro plan, ya sea buscando otra tienda o esperando.
 
+<img src={require('/static/img/concessionary.jpg').default} />
+
 ## Valorar la compra de un carro
 
 Una vez hemos terminado nuestro plan, podemos reflexionar acerca de las áreas a mejorar. Por ejemplo, si en el concesionario no nos dieron un buen servicio al cliente, deberíamos valorarlo y no volver a comprar carros de ahí. Asimismo, si surgió alguna eventualidad, podemos pensar en cómo podríamos haberla evitado (informándonos más, realizando un plan más detallado, etc.). 
+
+De este modo, la próxima vez que compremos un carro encontraremos menos inconvenientes y nuestro proyecto saldrá
+de una manera más fluida.
+
+<img src={require('/static/img/cat.jpg').default} />

@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '@theme/Layout';
 import {useColorMode} from '@docusaurus/theme-common';
 import { useHistory } from '@docusaurus/router';
-import { ReactFlow } from '@xyflow/react';
+import { MarkerType, ReactFlow } from '@xyflow/react';
 import '@xyflow/react/dist/style.css'; 
 
 function generatePointsAroundCircle(h, k, r, n){
@@ -22,18 +22,42 @@ let points = generatePointsAroundCircle(100, 100, 200, 6)
 console.log(points);
 
 const edges = [
-  { id: '1-2', source: '1', target: '2', label: 'con la información obtenida'},
-  { id: '2-3', source: '2', target: '3', label: 'para consolidar el plan'},
-  { id: '3-4', source: '3', target: '4', label: 'para realizar el plan'},
-  { id: '4-5', source: '4', target: '5', label: 'para comprobar el proceso'},
-  { id: '5-6', source: '5', target: '6', label: 'para reflexionar'},
-  { id: '6-1', source: '6', target: '1', label: 'y empezar nuevamente con'}
+  { id: '1->2', source: '1', target: '2', label: 'con la información obtenida', markerEnd: {
+    type: MarkerType.Arrow,
+    width: 20,
+    height: 20,
+  }},
+  { id: '2->3', source: '2', target: '3', label: 'para consolidar el plan', markerEnd: {
+    type: MarkerType.Arrow,
+    width: 20,
+    height: 20,
+  }},
+  { id: '3->4', source: '3', target: '4', label: 'para realizar el plan', markerEnd: {
+    type: MarkerType.Arrow,
+    width: 20,
+    height: 20,
+  }},
+  { id: '4->5', source: '4', target: '5', label: 'para comprobar el proceso', markerEnd: {
+    type: MarkerType.Arrow,
+    width: 20,
+    height: 20,
+  }},
+  { id: '5->6', source: '5', target: '6', label: 'para reflexionar', markerEnd: {
+    type: MarkerType.Arrow,
+    width: 20,
+    height: 20,
+  }},
+  { id: '6->1', source: '6', target: '1', label: 'y empezar nuevamente con', markerEnd: {
+    type: MarkerType.Arrow,
+    width: 20,
+    height: 20,
+  }}
 ];
  
 const nodes = [
   {
     id: '1',
-    data: { label: 'Informar' },
+    data: { label: '1. Informar' },
     position: points[3], 
     targetPosition: 'bottom',
     sourcePosition: 'bottom',
@@ -41,26 +65,26 @@ const nodes = [
   },
   {
     id: '2',
-    data: { label: 'Planificar' },
+    data: { label: '2. Planificar' },
     position: points[2],
     style: { backgroundColor: "#AFEBA2"}
   },
   {
     id: '3',
-    data: { label: 'Decidir' },
+    data: { label: '3. Decidir' },
     position: points[1],
     style: { backgroundColor: "#CBEBBC"}
   },
   {
     id: '4',
-    data: { label: 'Ejecutar' },
+    data: { label: '4. Ejecutar' },
     position: points[0],
     sourcePosition: 'top',
     style: { backgroundColor: "#DBE6DA"}
   },
   {
     id: '5',
-    data: { label: 'Controlar' },
+    data: { label: '5. Controlar' },
     position: points[5],
     targetPosition: 'bottom',
     sourcePosition: 'top',
@@ -68,11 +92,11 @@ const nodes = [
   },
   {
     id: '6',
-    data: { label: 'Valorar' },
+    data: { label: '6. Valorar' },
     position: points[4],
     sourcePosition: 'top',
     targetPosition: 'bottom',
-    style: { backgroundColor: "#AFEBA2"}
+    style: { backgroundColor: "#AFEBA2"},
   },
   {
     id: '7',
@@ -104,7 +128,7 @@ const DiagramComponent = () => {
 
   return (
   <div style={{ height: '94vh' }}>
-    <p style={{position: 'absolute', left: 50, top: 100}}>Haz click en los nodos para navegar</p>
+    <p style={{position: 'absolute', left: 50, top: 100, fontSize: 18}}>Presione los nodos para navegar</p>
     <ReactFlow onNodeClick={onNodeClick} colorMode={colorMode} fitView nodes={nodes} edges={edges} />
   </div>
   );

@@ -5,6 +5,8 @@ import MultipleAnswerContainer from '@site/src/components/MultipleAnswerContaine
 
 Una vez el proyecto se ha completado, se **valora** el proceso; es decir, se hace un proceso de **retroalimentación** que sirve para identificar errores y éxitos logrados, así como también reflexionar sobre la dinámica de grupo y posibles propuestas de mejora para la realización de proyectos futuros.
 
+<img src={require('/static/img/reflect.webp').default} />
+
 ## Ejemplos
 
 - Una vez se termina de desarrollar una página web, se pueden identificar áreas a mejorar (convivencia en grupo, herramientas utilizadas, problemática afrontada), para poder elaborar otras páginas de mejor manera.

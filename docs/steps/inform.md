@@ -22,6 +22,8 @@ Muchas personas saltan a elaborar un proyecto sin antes informarse correctamente
 
 :::
 
+<img src={require('/static/img/inform.png').default} />
+
 <!---## ¿Cómo obtenemos esta información?
 
 ¿Cómo obtenemos esta información? En el caso de los carros, existen varias maneras. Podemos investigar en internet, revisando los sitios promocionales de los modelos que nos interesan, o incluso ver videos y reseñas de otras personas. También podemos consultar con personas confiables que tengan más experiencia con los carros.-->
